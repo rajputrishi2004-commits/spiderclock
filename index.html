@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="clock">
+    <svg class="web" viewBox="-100 -100 200 200"></svg>
+
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+
+    <div class="hand second">
+      <svg class="spider" viewBox="-30 -30 60 60">
+        <g stroke="#fff" stroke-width="1.5" fill="none"
+           stroke-linecap="round" stroke-linejoin="round">
+          <!-- left legs -->
+          <polyline points="-4,-3 -14,-12 -24,-8 -28,6"/>
+          <polyline points="-4,-1 -16,-4 -26,2 -28,16"/>
+          <polyline points="-4,1 -16,6 -24,14 -24,24"/>
+          <polyline points="-3,3 -12,14 -16,22 -14,28"/>
+          <!-- right legs (mirror) -->
+          <polyline points="4,-3 14,-12 24,-8 28,6"/>
+          <polyline points="4,-1 16,-4 26,2 28,16"/>
+          <polyline points="4,1 16,6 24,14 24,24"/>
+          <polyline points="3,3 12,14 16,22 14,28"/>
+        </g>
+        <ellipse cx="0" cy="6" rx="6" ry="9" fill="#fff"/> <!-- body -->
+        <circle  cx="0" cy="-5" r="4" fill="#fff"/>        <!-- head -->
+      </svg>
+    </div>
+
+    <div class="center-dot"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
